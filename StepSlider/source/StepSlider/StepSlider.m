@@ -236,7 +236,7 @@ void withoutCAAnimation(withoutAnimationBlock code)
         CATextLayer *trackLabel;
         
         if (self.labels.count) {
-            trackLabel = [self textLayerWithSize:CGSizeMake(stepWidth-20, 40) index:i];
+            trackLabel = [self textLayerWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width/self.labels.count, 40) index:i];
         }
         
         if (i < _trackCirclesArray.count) {
